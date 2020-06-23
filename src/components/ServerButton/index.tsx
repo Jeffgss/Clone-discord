@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../../assets/Logo.sgv";
+import Logo from "../../assets/Logo.svg";
 
 import { Button } from "./styles";
 
@@ -17,12 +17,16 @@ const ServerButton: React.FC<Props> = ({
   hasNotifications,
   mentions
 }) => {
-  return <Button
-    isHome={isHome},
-    hasNotifications={hasNotifications},
-    mentions={mentions},
-    className={selected ? 'active' : ''}
-  >{isHome && <img src={Logo} alt="Rocketseat" />}</Button>;
+  return (
+    <Button
+      isHome={isHome}
+      hasNotifications={hasNotifications}
+      mentions={mentions}
+      className={selected ? "active" : ""}
+    >
+      {isHome && <img src={Logo} alt="Rocketseat" />}
+    </Button>
+  );
 };
 
 export default ServerButton;
